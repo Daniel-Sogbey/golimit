@@ -16,7 +16,7 @@ import (
 )
 
 func main(){
-    tb := NewRateLimiter(10, 5, 1)
+    tb := NewRateLimiter(10, 5, time.Second)
 	
     for i:=0; i< 5; i++ {
         if tb.Allow() {
